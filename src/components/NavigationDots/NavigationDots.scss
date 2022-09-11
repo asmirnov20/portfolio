@@ -1,0 +1,29 @@
+@use '../../scss/' as *;
+
+.app__navigation {
+    @include flex(center, center);
+    flex-direction: column;
+    padding: 1rem;
+
+    .app__navigation-dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #cbcbcb;
+        margin: 0.5rem;
+
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
+}
+
+@include mobile {
+
+    .app__navigation {
+        display: none;
+    }
+
+}

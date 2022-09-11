@@ -7,7 +7,7 @@ import './Navbar.scss'
 
 const Navbar = () => {
 
-    const navContent = ['home', 'about', 'contact', 'work', 'skills']
+    const navContent = ['Главная', 'Обо мне', 'Контакты', 'Работа', 'Навыки']
     const [toggle, setToggle] = useState(false)
 
     const open = () => setToggle(true)
@@ -32,7 +32,6 @@ const Navbar = () => {
             <div className="app__navbar-menu">
                 <HiMenuAlt4 onClick={open} />
 
-
                 {toggle && (
                     <motion.div
                         variants={menuAnimate}
@@ -41,11 +40,10 @@ const Navbar = () => {
                         exit='exit'
                     >
                         <HiX onClick={() => setToggle(false)} />
-                        
+
                         <ul>
                             {navContent.map(item => (
                                 <li key={item}>
-                                    <div />
                                     <a href={`#${item}`}
                                         onClick={close}
                                     >
