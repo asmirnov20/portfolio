@@ -67,3 +67,28 @@ export const scaleVariants = {
         }
     }
 }
+
+// work
+
+export const hoverDiv = {
+    whileHover: {
+        opacity: [0, 1]
+    },
+    transition: {
+        duration: 0.25,
+        ease: 'easeInOut',
+        staggerChildren: 0.5
+    }
+}
+
+export const linksAnimate = {
+    whileInView: {
+        scale: [0, 1]
+    },
+    whileHover: {
+        scale: [1, 1.2]
+    },
+    transition: {
+        duration: 0.15
+    }
+}

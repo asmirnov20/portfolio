@@ -9,17 +9,17 @@
     scroll-behavior: smooth;
 }
 
-html {
-    font-size: 100%;
+// html {
+//     font-size: 100%;
 
-    @include tablet {
-        font-size: 80%;
-    }
+//     @include tablet {
+//         font-size: 80%;
+//     }
 
-    @include mobile {
-        font-size: 60%;
-    }
-}
+//     @include mobile {
+//         font-size: 60%;
+//     }
+// }
 
 body {
     font-family: $font-family;
