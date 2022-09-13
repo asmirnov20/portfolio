@@ -85,5 +85,17 @@ a {
 
     @include mobile {
         padding: 4rem 1rem 2rem;
+    }
 }
+
+.app__flex {
+    @include flex(center, center);
+}
+
+.app__whitebg {
+    background-color: $white;
+}
+
+.app__primarybg {
+    background-color: $main-color;
 }
