@@ -1,5 +1,5 @@
 import logo from '../assets/logo.png';
-import profile from '../assets/profile.png';
+import profile from '../assets/profile-p.jpg';
 import circle from '../assets/circle.svg';
 import javascript from '../assets/javascript.png';
 import react from '../assets/react.png';

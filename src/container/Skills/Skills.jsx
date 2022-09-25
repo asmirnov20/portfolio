@@ -16,13 +16,13 @@ const Skills = () => {
 
     return (
         <>
-            <h2 className="head-text">Навыки</h2>
+            <h2 className="head-text">Skills</h2>
 
             <div className="app__skills-container">
                 <motion.div className="app__skills-list">
                     {skills.map(skill => (
                         <motion.div
-                            whileInView={{ opacity: [0, 1] }}
+                            whileInView={{ opacity: [0, 1], scale: [0, 1] }}
                             transition={{ duration: 0.5 }}
                             className="app__skills-item"
                             key={skill.name}
@@ -41,6 +41,6 @@ const Skills = () => {
 
 export default AppWrap(
     MotionWrap(Skills, 'app__skills'),
-    'skills',
+    'Skills',
     'app__whitebg'
 );

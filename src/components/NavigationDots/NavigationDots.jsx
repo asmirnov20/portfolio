@@ -2,7 +2,7 @@ import './NavigationDots.scss'
 
 const NavigationDots = ({ active }) => {
 
-    const navContent = ['home', 'about', 'work', 'skills', 'contact']
+    const navContent = ['Home', 'About', 'Projects', 'Skills', 'Contact']
 
     return (
         <div className='app__navigation'>

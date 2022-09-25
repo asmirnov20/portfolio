@@ -4,13 +4,14 @@
   flex: 1;
   width: 100%;
   flex-direction: column;
+
 }
 
 .app__work-filter {
   @include flex(center, center);
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 4rem 0 2rem;
+  margin: 2rem 0 2rem;
 
   .app__work-filter-item {
     @include flex(center, center);
@@ -18,6 +19,7 @@
     border-radius: 0.5rem;
     background-color: $white;
     color: $black;
+    font-size: 1.1rem;
     font-weight: 800;
 
     cursor: pointer;
@@ -38,12 +40,12 @@
 }
 
 .app__work-portfolio {
-  @include flex(center, center);
+  @include flex(center, stretch);
   flex-wrap: wrap;
  
 
   .app__work-item {
-    width: 270px;
+    width: 40%;
 
     @include tablet{
       width: 300px;
@@ -56,7 +58,6 @@
     background-color: $white;
     color: $black;
 
-    cursor: pointer;
     transition: all 0.3s ease;
 
     &:hover {
@@ -67,7 +68,7 @@
 
 .app__work-img {
   width: 100%;
-  height: 230px;
+  height: 300px;
   position: relative;
 
   img {
@@ -75,6 +76,10 @@
     height: 100%;
     border-radius: 0.5rem;
     object-fit: cover;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }
 
@@ -131,6 +136,9 @@
 
   .work__desc {
      margin-top: 10px;
+     text-align: justify;
+    text-indent: 4rem;
+    line-height: 1.7;
   }
 
   .app__work-tag {
@@ -140,5 +148,6 @@
     border-radius: 10px;
     background-color: $white;
     top: -25px;
+    
   }
 }

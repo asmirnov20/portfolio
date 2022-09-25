@@ -21,7 +21,7 @@
         padding: 1rem;
         border-radius: 10px;
         cursor: pointer;
-        background-color: #fef4f5;
+        background-color: $white;
 
         transition: all 0.3s ease-in-out;
 
@@ -55,7 +55,7 @@
 }
 
 .app__footer-cards .app__footer-card:last-child {
-    background-color: #f2f7fb;
+    background-color: $white;
 }
 
 .app__footer-cards .app__footer-card:last-child:hover {
@@ -74,7 +74,7 @@
         margin: 0.75rem 0;
         border-radius: 10px;
         cursor: pointer;
-        background-color: $main-color;
+        background-color: $white;
 
         transition: all 0.3s ease-in-out;
 
@@ -84,7 +84,7 @@
             padding: 0.95rem;
             border: none;
             border-radius: 7px;
-            background-color: $main-color;
+            background-color: $white;
 
             font-family: $font-family;
             color: $secondary-color;

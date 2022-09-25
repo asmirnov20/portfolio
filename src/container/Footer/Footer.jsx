@@ -36,7 +36,7 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Напиши мне</h2>
+      <h2 className="head-text">Chat with me</h2>
 
       <div className="app__footer-cards">
 
@@ -59,7 +59,7 @@ const Footer = () => {
             <input
               className="p-text"
               type="text"
-              placeholder="Ваше Имя"
+              placeholder="Your name"
               name="username"
               value={username}
               onChange={handleChangeInput}
@@ -69,7 +69,7 @@ const Footer = () => {
             <input
               className="p-text"
               type="email"
-              placeholder="Ваша эл. почта"
+              placeholder="Your Email"
               name="email"
               value={email}
               onChange={handleChangeInput}
@@ -78,7 +78,7 @@ const Footer = () => {
           <div>
             <textarea
               className="p-text"
-              placeholder="Your Message"
+              placeholder="Your Message..."
               value={message}
               name="message"
               onChange={handleChangeInput}
@@ -88,14 +88,14 @@ const Footer = () => {
             type="button"
             className="p-text"
             onClick={handleSubmit}
-          >{!isLoading ? 'Отправить письмо' : 'Отправляю...'}
+          >{!isLoading ? 'Send Message' : 'Sending...'}
           </button>
         </div>
       )
         : (
           <div>
             <h3 className="head-text">
-              Спасибо!
+              Thank you for getting in touch!
             </h3>
           </div>
         )}
@@ -105,6 +105,6 @@ const Footer = () => {
 
 export default AppWrap(
   MotionWrap(Footer, 'app__footer'),
-  'contact',
-  'app__whitebg',
+  'Contact',
+  'app__primarybg',
 );

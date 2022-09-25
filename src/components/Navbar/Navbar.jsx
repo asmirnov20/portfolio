@@ -7,7 +7,7 @@ import './Navbar.scss'
 
 const Navbar = () => {
 
-    const navContent = ['Главная', 'Обо мне', 'Контакты', 'Работа', 'Навыки']
+    const navContent = ['Home', 'About', 'Projects', 'Skills', 'Contact']
     const [toggle, setToggle] = useState(false)
 
     const open = () => setToggle(true)

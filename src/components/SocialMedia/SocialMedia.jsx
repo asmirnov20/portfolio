@@ -1,17 +1,18 @@
-import { SocialIcon } from "react-social-icons";
+import { FaTelegram } from 'react-icons/fa'
+import { VscGithub } from 'react-icons/vsc'
 import './SocialMedia.scss'
 
 const SocilaMedia = () => {
     return (
         <div className="app__social">
             <div>
-                <SocialIcon url='https://github.com/asmirnov20' target='_blank' />
+                <a href='https://github.com/asmirnov20' target='_blank' rel='noreferrer'>
+                    <VscGithub />
+                </a>
+
             </div>
             <div>
-                <SocialIcon url='https://t.me/+421949664243' target='_blank' />
-            </div>
-            <div>
-                <SocialIcon url='https://www.facebook.com/andrej.smirnov.73345' target='_blank' />
+                <FaTelegram url='https://t.me/+421949664243' target='_blank' />
             </div>
         </div >
     )

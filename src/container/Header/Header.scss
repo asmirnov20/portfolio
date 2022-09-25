@@ -1,6 +1,6 @@
 @use "../../scss/" as *;
 
-#home {
+#Home {
     position: relative;
     background: url("../../assets/bgIMG.png");
     background-size: cover;
@@ -14,6 +14,7 @@
 
 .app__header {
     @include flex(center,center);
+    flex-direction: column;
     flex: 1;
     width: 100%;
     height: 100%;
@@ -62,15 +63,19 @@
         div {
             margin-left: 20px;
         }
+        p {
+            font-size:1.2rem;
+        }
     }
     .badge__bottom {
         flex-direction: column;
-        margin-top: 3rem;
+        margin-top: 2rem;
 
         p {
             width: 100%;
             text-transform: uppercase;
             text-align: right;
+            font-size: 1.3rem;
         }
     }
 
@@ -85,7 +90,7 @@
     flex: 0.75;
     flex-wrap: wrap;
     height: 100%;
-    margin-left: 1rem;
+    margin-top: 2rem;
 
     div {
         @include flex(center, center);
@@ -104,8 +109,9 @@
         height: 100px;
 
             img {
-                width: 80%;
-                height: 80%;
+                width: 70%;
+                height: 70%;
+              
         }
     }
 
@@ -117,6 +123,8 @@
         img {
             width: 80%;
                 height: 80%;
+                background: yellow;
+                border-radius: 50%;
             }
     }
 
@@ -132,25 +140,16 @@
 }
 
 .app__header-img {
-    @include flex(flex-end, flex-end);
+    @include flex(center, center);
     flex: 1;
     height: 100%;
     position: relative;
-    margin: 2rem 0;
+    margin: 4rem 0 3rem;
 
     img {
-        width: 100%;
+        width: 60%;
         object-fit: contain;
         z-index: 1;
-    }
-
-    .overlay__circle {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 0;
-        width: 100%;
-        height: 90%;
+        border-radius:20%;
     }
 }

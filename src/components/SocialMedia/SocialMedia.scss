@@ -18,19 +18,17 @@
         transition: all 0.3s ease-in-out;
 
         svg {
-            width: 15px;
-            height: 15px;
-            color: $gray;
+            width: 30px;
+            height: 30px;
+            color: rgb(103, 103, 219);
+            @include flex(center, center);
+            transition: all 0.3s ease-in-out;
         }
 
         &:hover {
-            // background-color: $secondary-color;
-            // border-color: $secondary-color;
-            transform: scale(1.1);
-
-           svg {
-                color: $white;
-            }
+            border-color: $secondary-color;
+            transform: scale(1.2);
+            cursor: pointer;
         }
 
     }

@@ -18,18 +18,14 @@ export const menuAnimate = {
 }
 
 export const headerAnimate = {
-    initial: {
-        x: -100,
-        opacity: 0
-    },
-    animate: {
-        x: 0,
-        opacity: 1,
+    whileInView: {
+        x: [-300, 0],
+        opacity: [0, 1],
         transition: {
-            duration: 0.5,
-            ease: 'easeIn',
+            duration: 0.7,
+            ease: 'easeInOut'
         }
-    },
+    }
 }
 export const imageContainer = {
     initial: {
@@ -45,16 +41,14 @@ export const imageContainer = {
     },
 }
 export const imgScale = {
-    initial: {
-        scale: 0
-    },
-    animate: {
-        scale: 1,
+    whileInView: {
+        scale: [0, 1],
+        opacity: [0, 1],
         transition: {
-            duration: 1,
-            ease: 'easeInOut',
+            duration: 0.5,
+            ease: 'easeInOut'
         }
-    },
+    }
 }
 
 export const scaleVariants = {
@@ -62,7 +56,7 @@ export const scaleVariants = {
         scale: [0, 1],
         opacity: [0, 1],
         transition: {
-            duration: 1,
+            duration: 0.8,
             ease: 'easeInOut'
         }
     }
@@ -90,5 +84,22 @@ export const linksAnimate = {
     },
     transition: {
         duration: 0.15
+    }
+}
+
+//  about 
+export const aboutContainer = {
+    whileInView: {
+        y: [200, 0],
+        opacity: [0, 1],
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+}
+export const aboutItem = {
+    whileInView: {
+        y: [-200, 0],
+        opacity: [0, 1],
     }
 }

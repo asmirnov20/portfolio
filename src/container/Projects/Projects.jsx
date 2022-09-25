@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import { hoverDiv, linksAnimate } from '../../animations/animations';
-import './Work.scss';
+import './Projects.scss';
 
 const Work = () => {
 
@@ -30,7 +30,7 @@ const Work = () => {
         setTimeout(() => {
             setAnimateCard([{ y: 0, opacity: 1 }]);
 
-            if (item === 'Все') {
+            if (item === 'All') {
                 setFilteredWork(works);
             } else {
                 setFilteredWork(
@@ -40,12 +40,11 @@ const Work = () => {
         }, 500);
 
     }
-
-    const filterCategories = ['React JS', 'TypeScript', 'Next JS', 'UI/UX', 'Все']
-
+    console.log(works);
+    const filterCategories = ['React JS', 'Next JS', 'UI/UX', 'All']
     return (
         <>
-            <h2 className="head-text">Мои<span> работы</span></h2>
+            <h2 className="head-text">My<span> Projects</span></h2>
 
             <div className="app__work-filter">
                 {filterCategories.map((item, index) => (
@@ -112,6 +111,6 @@ const Work = () => {
 
 export default AppWrap(
     MotionWrap(Work, 'app__works'),
-    'work',
+    'Projects',
     'app__primarybg'
 )
