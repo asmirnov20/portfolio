@@ -40,8 +40,9 @@ const Work = () => {
         }, 500);
 
     }
-    console.log(works);
+    
     const filterCategories = ['React JS', 'Next JS', 'UI/UX', 'All']
+    
     return (
         <>
             <h2 className="head-text">My<span> Projects</span></h2>

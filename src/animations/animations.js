@@ -10,9 +10,9 @@ export const menuAnimate = {
         }
     },
     exit: {
-        x: '110%',
+        x: '100%',
         transition: {
-            duration: 0.1
+            duration: 0.3
         }
     }
 }

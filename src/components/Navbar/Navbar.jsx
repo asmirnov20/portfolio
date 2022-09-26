@@ -17,7 +17,10 @@ const Navbar = () => {
         <nav className='app__navbar'>
 
             <div className='app__navbar-logo'>
-                <img src={images.logo} alt="logo" />
+                <a href="#Home">
+                    <img src={images.logo} alt="logo" />
+                </a>
+
             </div>
 
             <ul className='app__navbar-links'>
@@ -32,6 +35,7 @@ const Navbar = () => {
             <div className="app__navbar-menu">
                 <HiMenuAlt4 onClick={open} />
 
+                {/* mobile menu */}
                 {toggle && (
                     <motion.div
                         variants={menuAnimate}
