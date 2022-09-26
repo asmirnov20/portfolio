@@ -18,22 +18,25 @@ const Skills = () => {
         <>
             <h2 className="head-text">Skills</h2>
 
-            <div className="app__skills-container">
-                <motion.div className="app__skills-list">
-                    {skills.map(skill => (
-                        <motion.div
-                            whileHover={{ scale: 1.15 }}
-                            className="app__skills-item"
-                            key={skill.name}
-                        >
-                            <div style={{ backgroundColor: skill.bgColor }}>
-                                <img src={urlFor(skill.icon)} alt={skill.name} />
-                            </div>
-                            <p className="p-text">{skill.name}</p>
-                        </motion.div>
-                    ))}
-                </motion.div>
-            </div>
+            {skills && (
+                <div className="app__skills-container">
+                    <motion.div className="app__skills-list">
+                        {skills.map(skill => (
+                            <motion.div
+                                whileHover={{ scale: 1.15 }}
+                                className="app__skills-item"
+                                key={skill.name}
+                            >
+                                <div style={{ backgroundColor: skill.bgColor }}>
+                                    <img src={urlFor(skill.icon)} alt={skill.name} />
+                                </div>
+                                <p className="p-text">{skill.name}</p>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
+            )}
+
         </>
     );
 };

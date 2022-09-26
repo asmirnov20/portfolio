@@ -40,9 +40,9 @@ const Work = () => {
         }, 500);
 
     }
-    
+
     const filterCategories = ['React JS', 'Next JS', 'UI/UX', 'All']
-    
+
     return (
         <>
             <h2 className="head-text">My<span> Projects</span></h2>
@@ -59,53 +59,56 @@ const Work = () => {
                 ))}
             </div>
 
-            <motion.div
-                animate={animateCard}
-                transition={{ duration: 0.5, delayChildren: 0.5 }}
-                className="app__work-portfolio"
-            >
-                {filteredWork.map((work, index) => (
-                    <div className="app__work-item" key={index}>
-                        <div className="app__work-img">
-                            <img src={urlFor(work.imgUrl)} alt={work.name} />
-                            <motion.div
-                                whileHover={hoverDiv.whileHover}
-                                transition={hoverDiv.transition}
-                                className="app__work-hover"
-                            >
-                                <a href={work.projectLink} target="_blank" rel="noreferrer">
-                                    <motion.div
-                                        whileInView={linksAnimate.whileInView}
-                                        whileHover={linksAnimate.whileHover}
-                                        transition={linksAnimate.transition}
-                                    >
-                                        <AiFillEye />
-                                    </motion.div>
-                                </a>
+            {works && (
+                <motion.div
+                    animate={animateCard}
+                    transition={{ duration: 0.5, delayChildren: 0.5 }}
+                    className="app__work-portfolio"
+                >
+                    {filteredWork.map((work, index) => (
+                        <div className="app__work-item" key={index}>
+                            <div className="app__work-img">
+                                <img src={urlFor(work.imgUrl)} alt={work.name} />
+                                <motion.div
+                                    whileHover={hoverDiv.whileHover}
+                                    transition={hoverDiv.transition}
+                                    className="app__work-hover"
+                                >
+                                    <a href={work.projectLink} target="_blank" rel="noreferrer">
+                                        <motion.div
+                                            whileInView={linksAnimate.whileInView}
+                                            whileHover={linksAnimate.whileHover}
+                                            transition={linksAnimate.transition}
+                                        >
+                                            <AiFillEye />
+                                        </motion.div>
+                                    </a>
 
-                                <a href={work.codeLink} target="_blank" rel="noreferrer">
-                                    <motion.div
-                                        whileInView={linksAnimate.whileInView}
-                                        whileHover={linksAnimate.whileHover}
-                                        transition={linksAnimate.transition}
-                                    >
-                                        <AiFillGithub />
-                                    </motion.div>
-                                </a>
-                            </motion.div>
-                        </div>
+                                    <a href={work.codeLink} target="_blank" rel="noreferrer">
+                                        <motion.div
+                                            whileInView={linksAnimate.whileInView}
+                                            whileHover={linksAnimate.whileHover}
+                                            transition={linksAnimate.transition}
+                                        >
+                                            <AiFillGithub />
+                                        </motion.div>
+                                    </a>
+                                </motion.div>
+                            </div>
 
-                        <div className="app__work-content">
-                            <h4 className="bold-text">{work.title}</h4>
-                            <p className="work__desc">{work.description}</p>
+                            <div className="app__work-content">
+                                <h4 className="bold-text">{work.title}</h4>
+                                <p className="work__desc">{work.description}</p>
 
-                            <div className="app__work-tag">
-                                <p className="p-text">{work.tags[0]}</p>
+                                <div className="app__work-tag">
+                                    <p className="p-text">{work.tags[0]}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
-            </motion.div>
+                    ))}
+                </motion.div>
+            )}
+
         </>
     )
 }

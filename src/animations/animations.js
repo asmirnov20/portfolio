@@ -93,7 +93,7 @@ export const aboutContainer = {
         y: [200, 0],
         opacity: [0, 1],
         transition: {
-            staggerChildren: 0.1
+            duration: 0.5
         }
     }
 }
