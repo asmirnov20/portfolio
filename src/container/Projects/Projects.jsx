@@ -40,8 +40,8 @@ const Work = () => {
         }, 500);
 
     }
-
-    const filterCategories = ['React JS', 'Next JS', 'UI/UX', 'All']
+    
+    const filterCategories = ['React', 'TypeScript', 'Next JS', 'UI/UX', 'All']
 
     return (
         <>
